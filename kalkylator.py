@@ -45,7 +45,11 @@ while True :
     if go in ["yes" , "no"]:
         break 
 
-
+if go == "yes" :
+    save = input(str("Использовать предыдущий результат ? (yes / no) : ")).strip().lower()
+elif go == "no" :
+    print("До свидания !")
+    exit()
 
 
 
