@@ -1,7 +1,7 @@
 # The cod is a mini kalkylator 
 
-while True :
-    try :                #
+while True :           # проверка на число
+    try :                
         a = int(input("Введите первое число : "))
         break
     except ValueError :
@@ -14,7 +14,7 @@ while True :        # цикл  / знак операции
     else : 
         print("Вы ввели не правильный знак операции ")
         
-while True :        
+while True :        #проверка на число
     try :
         b = int(input("Введите второе число : "))
         break
