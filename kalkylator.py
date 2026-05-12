@@ -1,18 +1,28 @@
 # The cod is a mini kalkylator 
-#Цикл 1 : исключаем вариацию ввода не верного знака операции 
+
 while True :
+    try :                #
+        a = int(input("Введите первое число : "))
+        break
+    except ValueError :
+        print("Вы ввели не число ")
+
+while True :        # цикл  / знак операции
     want = input("Что делаем ? (+ , - ,  * ,  : )")
     if want in ["+" , "-" , "*" , ":"] :
         break
     else : 
         print("Вы ввели не правильный знак операции ")
         
-#Цикл 2 : исключаем вариацию ввода не числа
-while True :
+while True :        
     try :
-        a = int(input("Введите первое число : "))
         b = int(input("Введите второе число : "))
-        
+        break
+    except ValueError :
+        print("Вы ввели не число ")
+
+while True :         #Цикл / основной калькулятор 
+    try :
         if want == "+" :
             c = a + b 
         elif want == "-" :
