@@ -21,24 +21,29 @@ while True :        #проверка на число
     except ValueError :
         print("Вы ввели не число ")
 
-while True :         #Цикл / основной калькулятор 
-    try :
-        if want == "+" :
-            c = a + b 
-        elif want == "-" :
-            c = a - b 
-        elif want == "*" :
-            c = a * b
-        elif want == ":" :
-            c = a / b
-        else :
-            print("Вы ввели не правильный знак операции ")
-        break
-    except ValueError :
-        print("Вы ввели не число ")
+
+
+if want == "+" :
+    c = a + b 
+elif want == "-" :
+    c = a - b 
+elif want == "*" :
+    c = a * b
+elif want == ":" :
+    c = a / b
+else :
+    print("Вы ввели не правильный знак операции ")
+
+
 print(f"Результат : {c}")
 
-go = input(str("Хотите продолжить ? (yes / no) : "))
+
+
+while True :
+    go = input(str("Хотите продолжить ? (yes / no) : ")).strip().lower()
+    
+    if go in ["yes" , "no"]:
+        break 
 
 
 
