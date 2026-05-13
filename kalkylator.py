@@ -3,7 +3,7 @@ import time
 
 
 hg = 0
-while hg < 1000 :        
+while hg < 1 :        
     while True :           # проверка на число
         try :                
             a = int(input("Введите первое число : "))
@@ -12,8 +12,8 @@ while hg < 1000 :
             print("Вы ввели не число ")
 
     while True :        # цикл  / знак операции
-        want = input("Что делаем ? (+ , - ,  * ,  : )")
-        if want in ["+" , "-" , "*" , ":"] :
+        want = input("Что делаем ? (+ , - ,  * ,  : , ** ) : ")
+        if want in ["+" , "-" , "*" , ":" , "**"] :
             break
         else : 
             print("Вы ввели не правильный знак операции ")
@@ -33,6 +33,8 @@ while hg < 1000 :
         c = a * b
     elif want == ":" :
         c = a / b
+    elif want == "**" :
+        c = a ** b
 
     print(f"Результат : {c}")
     
