@@ -1,5 +1,9 @@
 # The cod is a mini kalkylator 
-while go == "exit" :        
+import time
+
+
+hg = 0
+while hg < 1000 :        
     while True :           # проверка на число
         try :                
             a = int(input("Введите первое число : "))
@@ -20,6 +24,7 @@ while go == "exit" :
             break
         except ValueError :
             print("Вы ввели не число ")
+            
     if want == "+" :
         c = a + b 
     elif want == "-" :
@@ -28,16 +33,16 @@ while go == "exit" :
         c = a * b
     elif want == ":" :
         c = a / b
-    else :
-        print("Вы ввели не правильный знак операции ")
+
     print(f"Результат : {c}")
+    
     while True :
-        go = input(str("Хотите продолжить ? (yes / exit) : ")).strip().lower()
-        if go in ["yes" , "exit"]:
-            break 
-        if go == "yes" :
-            save = input(str("Использовать предыдущий результат ? (yes / no) : ")).strip().lower()
-            
-        if go == "exit" : 
-            print("До свидания !")
+        go = input(str("Хотите продолжить ? (yes / no ) : ")).strip().lower()
+        if go in ["yes" , "no"]:
             break
+    if go == "yes" :
+        print("Продолжим !")
+        time.sleep(2)
+    elif go == "no" :
+        print("До свидания !")
+        exit()
