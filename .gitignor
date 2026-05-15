@@ -1,0 +1,14 @@
+# PyInstaller
+build/
+*.spec
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Системное
+.DS_Store
